@@ -9,18 +9,6 @@
     .hide-on-mb {
         display: none;
     }
-}
-
-
-/*tablet*/
-
-@media (min-width:820px) {
-    .home__banner {
-        height: 500px!important;
-    }
-    .banner__left {
-        margin-top: 0px!important;
-    }
     .about__img,
     .banner__img {
         display: block;
@@ -28,6 +16,18 @@
     }
     .banner__img {
         width: 70%;
+    }
+}
+
+
+/*tablet*/
+
+@media (min-width:820px) and(max-width:1023px) {
+    .home__banner {
+        height: 500px!important;
+    }
+    .banner__left {
+        margin-top: 0px!important;
     }
 }
 
@@ -65,7 +65,7 @@
     }
     .about__banner-name,
     .home__banner-name {
-        font-size: 4rem;
+        font-size: 3.8rem;
     }
     .about__banner-description,
     .home__banner-description {
@@ -82,5 +82,8 @@
     }
     .newsletter__input {
         width: 100%;
+    }
+    .follow__icon {
+        justify-content: space-between;
     }
 }
