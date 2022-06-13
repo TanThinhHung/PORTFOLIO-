@@ -95,6 +95,13 @@ nav_mobile.addEventListener('click', function() {
     this.classList.toggle('is__show');
     overlaymenu.classList.toggle('open');
     nav__menu_mobile.classList.toggle('is_show_menu');
+});
+
+const nav__menu_mobile_pages = document.querySelector('.nav__menu-mobile-pages');
+const nav__menu_mobile_list = document.querySelector('.nav__menu_mobile-list')
+nav__menu_mobile_pages.addEventListener('click', function() {
+    nav__menu_mobile_list.classList.toggle('show_pages');
+
 })
 
 

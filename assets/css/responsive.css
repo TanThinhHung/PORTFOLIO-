@@ -107,8 +107,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        flex-wrap: wrap;
     }
-    .nav__menu_mobile-item-link {
+    .nav__menu_mobile-item-link,
+    .nav__menu_list-mobile-link {
         font-size: 1.4rem;
         text-transform: uppercase;
         color: #fff;
@@ -119,6 +122,24 @@
         color: #fff;
         font-size: 1.4rem;
         padding: 15px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+    .nav__menu_list-mobile {
+        position: relative;
+        width: 100%;
+        top: 0;
+        transform: translateY(-100%);
+        transition: all 0.4s ease;
+        display: none;
+    }
+    .nav__menu_list-mobile-item {}
+    .show_pages .nav__menu-mobile-pages .list-pages {
+        display: block;
+        transform: translateY(0%);
+    }
+    .show_pages .nav__menu-mobile-pages i {
+        transform: rotate(180deg);
     }
     .is_show_menu {
         transform: translateX(0%);
