@@ -86,6 +86,16 @@ item.click(function() {
 
 })
 
+/**show mneu-icon-chart */
+const nav_mobile = document.querySelector('.nav-mobile');
+const overlaymenu = document.querySelector('.overlaymenu');
+const nav__menu_mobile = document.querySelector('.nav__menu_mobile');
+console.log(nav_mobile);
+nav_mobile.addEventListener('click', function() {
+    this.classList.toggle('is__show');
+    overlaymenu.classList.toggle('open');
+    nav__menu_mobile.classList.toggle('is_show_menu');
+})
 
 
 
@@ -93,8 +103,7 @@ item.click(function() {
 
 
 
-
-
+/*dropdown menu */
 const list_blog = document.querySelector('.list-blog');
 const list_page = document.querySelector('.ul__list-page');
 
