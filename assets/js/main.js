@@ -1,0 +1,119 @@
+$(document).ready(function() {
+    /*counter */
+    $(".fact__number").counterUp({
+        delay: 10,
+        time: 2000
+    });
+    $("#slider__feedback").owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+
+            },
+
+            768: {
+                items: 2,
+                dots: true,
+
+            }
+
+
+
+
+        }
+    });
+    $("#slider__brand").owlCarousel({
+        loop: true,
+        autoplay: true,
+        rewind: true,
+        /* use rewind if you don't want loop */
+        margin: 20,
+        dots: false,
+        /*
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        */
+        responsiveClass: true,
+        autoHeight: true,
+        autoplayTimeout: 2000,
+        smartSpeed: 800,
+        autoplayHoverPause: false,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+
+            768: {
+                items: 3,
+                nav: false,
+            },
+
+            1000: {
+                items: 5,
+                nav: false
+            },
+
+
+        }
+    });
+});
+
+/**filter */
+const item = $('.portfolio__list-item');
+
+item.click(function() {
+    const value = $(this).attr('data-filter');
+    console.log(value);
+    if (value == 'all') {
+        $('.portfolio__item').show(1000)
+    } else {
+        $('.portfolio__item').not('.' + value).hide(1000);
+        $('.portfolio__item').filter('.' + value).show(1000);
+    }
+});
+item.click(function() {
+    $(this).addClass('text-active').siblings().removeClass('text-active');
+
+})
+
+
+
+
+
+
+
+
+
+
+const list_blog = document.querySelector('.list-blog');
+const list_page = document.querySelector('.ul__list-page');
+
+const nav_list_blog = document.querySelector('.nav__list-item-blog');
+const nav_list_page = document.querySelector('.nav__list-item-page');
+console.log(nav_list_page);
+nav_list_blog.addEventListener("mouseover", function() {
+    list_blog.style.display = "block";
+    list_page.style.display = "none";
+})
+nav_list_blog.addEventListener("mouseleave", function() {
+    list_blog.style.display = "none";
+
+})
+nav_list_page.addEventListener("mouseover", function() {
+    list_blog.style.display = "none";
+    list_page.style.display = "block";
+})
+nav_list_page.addEventListener("mouseleave", function() {
+    list_page.style.display = "none";
+
+})
