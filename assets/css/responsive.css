@@ -123,6 +123,12 @@
     .is_show_menu {
         transform: translateX(0%);
     }
+    .feedback__img {
+        max-width: 20%;
+        min-width: 20%;
+        margin-right: 15px;
+        transform: translateY(20%);
+    }
 }
 
 
