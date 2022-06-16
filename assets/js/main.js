@@ -106,10 +106,6 @@ nav__menu_mobile_pages.addEventListener('click', function() {
 
 
 
-
-
-
-
 /*dropdown menu */
 const list_blog = document.querySelector('.list-blog');
 const list_page = document.querySelector('.ul__list-page');
@@ -132,4 +128,23 @@ nav_list_page.addEventListener("mouseover", function() {
 nav_list_page.addEventListener("mouseleave", function() {
     list_page.style.display = "none";
 
+})
+
+/*back-to-top */
+const back_top = document.querySelector('.back-to-top');
+console.log(back_top);
+/*-- thực hiện sự kiện scroll */
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    console.log(scrolled);
+    if (scrolled > 600) {
+        back_top.classList.add('show-back');
+    } else {
+        back_top.classList.remove('show-back');
+    }
+    back_top.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0
+        })
+    })
 })

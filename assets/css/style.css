@@ -681,6 +681,29 @@
     display: block;
 }
 
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 50px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+}
+
+.show-back {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.to-top i {
+    font-size: 4.5rem;
+    color: var(--text-active);
+}
+
 .footer {
     background: var(--bg-footer);
 }
